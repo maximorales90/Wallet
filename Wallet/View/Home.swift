@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Home.swift
 //  Wallet
 //
 //  Created by Maximiliano Morales on 18/04/2022.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Home: View {
     var body: some View {
-        Home()
+        Text("Prueba")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Home()
     }
 }
