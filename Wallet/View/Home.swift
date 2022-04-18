@@ -25,6 +25,7 @@ struct Home: View {
                     }
                 }
             }
+            .coordinateSpace(name: "SCROLL")
         }
         .padding([.horizontal,.top])
     }
@@ -33,11 +34,16 @@ struct Home: View {
     @ViewBuilder
     func CardView(card: Card)->some View{
         GeometryReader{proxy in
+            
+            let rect = proxy.frame(in: .named("SCROLL"))
+            
+            let offset = -rect.minY + CGFloat(getIndex(Card: card) * 70)
+            
             ZStack(alignment: .bottomLeading){
                 
                 Image(card.cardImage)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                 
                 VStack(alignment: .leading, spacing: 10){
                     
@@ -53,9 +59,18 @@ struct Home: View {
                 .padding(.bottom,10)
                 .foregroundColor(.white)
             }
+            .offset(y: offset)
             
         }
         .frame(height: 200)
+        .padding(.horizontal)
+    }
+    
+    //MARK: Index
+    func getIndex(Card: Card)->Int{
+        return cards.firstIndex{ currentCard in
+            return currentCard.id == Card.id
+        } ?? 0
     }
     
     //MARK: Hiding all number except last four
