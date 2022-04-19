@@ -41,6 +41,10 @@ struct DetailView: View {
                 ScrollView(.vertical, showsIndicators: false){
                     VStack(spacing: 20){
                         
+                        ForEach(expenses){expense in
+                            ExpenseCardView(expense: expense)
+                        }
+                        
                     }
                     .padding()
                 }

@@ -52,14 +52,8 @@ struct Home: View {
                     ForEach(cards){card in
                         
                         Group{
-                            if currentCard?.id == card.id && showDetailCard{
-                                CardView(card: card)
-                                    .opacity(0)
-                            }
-                            else{
-                                CardView(card: card)
-                                    .matchedGeometryEffect(id: card.id, in: animation)
-                            }
+                            CardView(card: card)
+                                .matchedGeometryEffect(id: card.id, in: animation)
                         }
                             .onTapGesture {
                                 withAnimation(.easeInOut(duration: 0.35)){

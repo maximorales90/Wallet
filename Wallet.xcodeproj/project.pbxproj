@@ -18,6 +18,7 @@
 		0FF7D793280DC783005AEA90 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D792280DC783005AEA90 /* Home.swift */; };
 		0FF7D799280E1A48005AEA90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D798280E1A48005AEA90 /* DetailView.swift */; };
 		0FF7D79B280E54AD005AEA90 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D79A280E54AD005AEA90 /* Expense.swift */; };
+		0FF7D79D280E555B005AEA90 /* ExpenseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0FF7D792280DC783005AEA90 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0FF7D798280E1A48005AEA90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0FF7D79A280E54AD005AEA90 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				0FF7D792280DC783005AEA90 /* Home.swift */,
 				0FF7D798280E1A48005AEA90 /* DetailView.swift */,
+				0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF7D79B280E54AD005AEA90 /* Expense.swift in Sources */,
+				0FF7D79D280E555B005AEA90 /* ExpenseCardView.swift in Sources */,
 				0FF7D766280DC3F1005AEA90 /* ContentView.swift in Sources */,
 				0FF7D791280DC725005AEA90 /* Card.swift in Sources */,
 				0FF7D793280DC783005AEA90 /* Home.swift in Sources */,
