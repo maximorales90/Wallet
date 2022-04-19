@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeView: View {
     //MARK: Animation Properties
     @State var expandCards: Bool = false
     
@@ -156,6 +156,6 @@ func customizedCardNumber(number: String)->String {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeView()
     }
 }

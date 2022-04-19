@@ -15,7 +15,7 @@
 		0FF7D77F280DC3F3005AEA90 /* WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D77E280DC3F3005AEA90 /* WalletUITests.swift */; };
 		0FF7D781280DC3F3005AEA90 /* WalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D780280DC3F3005AEA90 /* WalletUITestsLaunchTests.swift */; };
 		0FF7D791280DC725005AEA90 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D790280DC725005AEA90 /* Card.swift */; };
-		0FF7D793280DC783005AEA90 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D792280DC783005AEA90 /* Home.swift */; };
+		0FF7D793280DC783005AEA90 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D792280DC783005AEA90 /* HomeView.swift */; };
 		0FF7D799280E1A48005AEA90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D798280E1A48005AEA90 /* DetailView.swift */; };
 		0FF7D79B280E54AD005AEA90 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D79A280E54AD005AEA90 /* Expense.swift */; };
 		0FF7D79D280E555B005AEA90 /* ExpenseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */; };
@@ -50,7 +50,7 @@
 		0FF7D77E280DC3F3005AEA90 /* WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITests.swift; sourceTree = "<group>"; };
 		0FF7D780280DC3F3005AEA90 /* WalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0FF7D790280DC725005AEA90 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		0FF7D792280DC783005AEA90 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0FF7D792280DC783005AEA90 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0FF7D798280E1A48005AEA90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0FF7D79A280E54AD005AEA90 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardView.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		0FF7D78E280DC6E1005AEA90 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0FF7D792280DC783005AEA90 /* Home.swift */,
+				0FF7D792280DC783005AEA90 /* HomeView.swift */,
 				0FF7D798280E1A48005AEA90 /* DetailView.swift */,
 				0FF7D79C280E555B005AEA90 /* ExpenseCardView.swift */,
 			);
@@ -292,7 +292,7 @@
 				0FF7D79D280E555B005AEA90 /* ExpenseCardView.swift in Sources */,
 				0FF7D766280DC3F1005AEA90 /* ContentView.swift in Sources */,
 				0FF7D791280DC725005AEA90 /* Card.swift in Sources */,
-				0FF7D793280DC783005AEA90 /* Home.swift in Sources */,
+				0FF7D793280DC783005AEA90 /* HomeView.swift in Sources */,
 				0FF7D799280E1A48005AEA90 /* DetailView.swift in Sources */,
 				0FF7D764280DC3F1005AEA90 /* WalletApp.swift in Sources */,
 			);
