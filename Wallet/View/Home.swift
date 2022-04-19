@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct Home: View {
-    //MARK: Animation properties
+    //MARK: Animation Properties
     @State var expandCards: Bool = false
+    
+    //MARK: Detail View Properties
+    @State var currentCard: Card?
+    @State var showDetailCard: Bool = false
+    @Namespace var animation
+    
     
     var body: some View {
         
@@ -44,7 +50,23 @@ struct Home: View {
                     
                     //MARK: Cards
                     ForEach(cards){card in
-                        CardView(card: card)
+                        
+                        Group{
+                            if currentCard?.id == card.id && showDetailCard{
+                                CardView(card: card)
+                                    .opacity(0)
+                            }
+                            else{
+                                CardView(card: card)
+                                    .matchedGeometryEffect(id: card.id, in: animation)
+                            }
+                        }
+                            .onTapGesture {
+                                withAnimation(.easeInOut(duration: 0.35)){
+                                    currentCard = card
+                                    showDetailCard = true
+                                }
+                            }
                     }
                 }
                 .overlay{
@@ -62,6 +84,13 @@ struct Home: View {
             .offset(y: expandCards ? 0 : 30)
         }
         .padding([.horizontal,.top])
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay{
+            if let currentCard = currentCard,showDetailCard {
+                DetailView(currentCard: currentCard, showDetailCard: $showDetailCard, animation: animation)
+            }
+        }
+               
     }
     
     //MARK: Card View
@@ -77,7 +106,7 @@ struct Home: View {
                 
                 Image(card.cardImage)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                 
                 VStack(alignment: .leading, spacing: 10){
                     
@@ -106,30 +135,29 @@ struct Home: View {
             return currentCard.id == Card.id
         } ?? 0
     }
+}
+
+//MARK: Global Hiding all number except last four
+func customizedCardNumber(number: String)->String {
+    var newValue: String = ""
+    let maxCount = number.count - 4
     
-    //MARK: Hiding all number except last four
-    func customizedCardNumber(number: String)->String {
-        var newValue: String = ""
-        let maxCount = number.count - 4
-        
-        number.enumerated().forEach { value in
-            if value.offset >= maxCount{
-                let string = String(value.element)
-                newValue.append(contentsOf: string)
+    number.enumerated().forEach { value in
+        if value.offset >= maxCount{
+            let string = String(value.element)
+            newValue.append(contentsOf: string)
+        }
+        else{
+            let string = String(value.element)
+            if string == " "{
+                newValue.append(contentsOf: " ")
             }
             else{
-                let string = String(value.element)
-                if string == " "{
-                    newValue.append(contentsOf: " ")
-                }
-                else{
-                    newValue.append(contentsOf: "*")
-                }
+                newValue.append(contentsOf: "*")
             }
         }
-        return newValue
     }
-    
+    return newValue
 }
 
 struct Home_Previews: PreviewProvider {
