@@ -13,7 +13,7 @@ La Home muestra las tarjetas de crédito y diferentes animaciones entre las tran
 
 ## ScreenShots 
 
-| Home | Expand Wallet | Detalle |
+| Wallet | Wallet | Wallet |
 | :-: | :-: | :-: |
 | <img src="Assets/home.png"/> | <img src="Assets/expand.png"/> | <img src="Assets/detalle.png"/> | 
 
